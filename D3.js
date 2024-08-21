@@ -125,7 +125,7 @@ let femaleCharacters = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
-    femaleCharacters.push(starWarsCharacters[i].name);
+    femaleCharacters.push(starWarsCharacters[i]);
   }
 }
 
@@ -150,19 +150,19 @@ const eyeColor = {
 for (let i = 0; i < starWarsCharacters.length; i++) {
   switch (starWarsCharacters[i].eye_color) {
     case "blue":
-      eyeColor.blue.push(starWarsCharacters[i].name);
+      eyeColor.blue.push(starWarsCharacters[i]);
       break;
     case "yellow":
-      eyeColor.yellow.push(starWarsCharacters[i].name);
+      eyeColor.yellow.push(starWarsCharacters[i]);
       break;
     case "brown":
-      eyeColor.brown.push(starWarsCharacters[i].name);
+      eyeColor.brown.push(starWarsCharacters[i]);
       break;
     case "red":
-      eyeColor.red.push(starWarsCharacters[i].name);
+      eyeColor.red.push(starWarsCharacters[i]);
       break;
     case "blue-gray":
-      eyeColor.blue_gray.push(starWarsCharacters[i].name);
+      eyeColor.blue_gray.push(starWarsCharacters[i]);
       break;
 
     default:
@@ -223,8 +223,8 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 console.log(charactersNames.length);
 for (let i = 0; i < charactersNames.length; i++) {
   if (
-    femaleCharacters[0] === charactersNames[i] ||
-    femaleCharacters[1] === charactersNames[i]
+    charactersNames[i] === femaleCharacters[0].name ||
+    charactersNames[i] === femaleCharacters[1].name
   ) {
     charactersNames.splice(i, 1);
   }
